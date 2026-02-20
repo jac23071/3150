@@ -1,0 +1,19 @@
+String methods:
+	-contains (in c23 only)
+	-substr(idx, num_chars_after_idx)
+	-size_t(use for idx in for loops)
+	-npos (no position found; in size_t type)
+	-toupper and tolower (modifies strings char by char; part of std namespace)
+	-isalpha
+	-isdigit
+	-isspace
+	-handling strings and ints:
+		+stoi (string to int)
+		+itos (int to string)
+			*to_string([num])
+		+stod (string to double)
+		+dtos (double to string)
+Range-based for loops: for([type][name]:[buffer]){}
+	-each element is passed by value, not by reference. (each element is a copy)
+	
+

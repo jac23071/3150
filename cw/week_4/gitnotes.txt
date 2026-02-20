@@ -1,0 +1,6 @@
+Git branch = shows branches
+git checkout -b [branchname] = switch into branch branchname
+git merge = merge branches
+sync local and remote repos with push and pull commands
+use .gitignore to make the git add command ignor e certain files (like .out files)
+

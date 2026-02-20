@@ -1,0 +1,7 @@
+three kinds of errors:
+	compile time (bad syntax)
+	link time (missing object/compilation)
+	run time (bad logic)
+can cobat these with sanitazers to detect bugs while the program runs
+	
+

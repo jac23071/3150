@@ -1,0 +1,6 @@
+Use pip to install python packages
+By default, pip installs itself directly on our computer (global installation), but this is unsafe
+Global installation could overwrite the OS's code and cause ur computer to get bricked
+This is why python virtual environments exist, this is where python packages get installed t prevent conflicts.
+Creating a PVE:
+ + 

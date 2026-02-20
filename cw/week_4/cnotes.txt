@@ -1,0 +1,16 @@
+C++ allows for function overloading
+	+common practice
+	+main can NEVER be overloaded
+Main may take in no args, or take in argc and argv
+C++ supports c style strings and std::string
+	+c style= char array ending in \0
+		+less overhead that std string
+		+insecure
+		+comparing strings is a hastle
+		+no easy string concatenation
+	+std::string
+		+in std namespace
+		+has methods like sixe() and length() built in
+		+easy to check for equality
+		+you can even add together a atd string and a cstyke string
+

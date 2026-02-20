@@ -1,0 +1,9 @@
+from iostream lib:
+	-std::cin
+	-std::cout
+	-std::cerr
+Mirror the use of redirects in the bash terminal
+Successful/unsuccessful redirs into/from streams can be used to return true/false
+include <fstream> for file i/o
+	-std::ifstream [stream_name]("[filename]")
+	-std::oftsream [stream_name]("[filename]")
