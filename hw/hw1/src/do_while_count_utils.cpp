@@ -10,10 +10,11 @@ namespace do_while_count_utils{
 
 		int arr[5] = {1,2,3,4,5};
 		for (int num : arr){
+			std::cout << "Value: " << num << std::endl;
 			if(num == var){
 				break;
 			}
-			std::cout << "Value: " << num << std::endl;
+
 		}
 	}
 

@@ -13,13 +13,13 @@ namespace grade_utils{
 			std::cout << "Invalid grade" << std::endl;
 			return -1;
 		}
-		if(type == 'U'){
+		if(type == 'U' || type == 'u'){
 			if(grade >= 60){
 				std::cout << "Status: Pass" << std::endl;
 			}else{
 				std::cout << "Status: Fail" << std::endl;
 			}
-		}else if (type == 'G'){
+		}else if (type == 'G' || type == 'g'){
 			if(grade >= 70){
 				std::cout << "Status: Pass" << std::endl;
 			}

@@ -8,7 +8,7 @@ namespace string_utils{
 	 */
 		int strlen;
 		std::string fullString;
-		std::cout << "Enter your string length:" << std::endl;
+		std::cout << "Enter string length:" << std::endl;
 		std::cin >> strlen;
 		if (strlen > 20){
 			std::cout << "Error: string length must be <20" << std::endl;
@@ -18,6 +18,7 @@ namespace string_utils{
 		std::cout << "Enter string:";
 		std::getline(std::cin, fullString);
 		char array[20];
+		strlen++;
 		for(int i = 0; i< strlen-1; i++){
 			array[i] = fullString[i]; 
 		}
