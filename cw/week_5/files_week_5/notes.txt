@@ -1,0 +1,54 @@
+common string functions
+
+make sure to include cctype
+
+std::isdigit --> tests if number
+std::isalpha --> tests if letter
+std::isspace --> tests if space
+
+
+all these expect an unsigned character
+can specify if desired
+
+
+std::stoi --> string to int
+std::stod --> string to double
+std::stol --> string to long
+
+causes runtime error if not a valid string
+
+std::tostring --> any numeric value to string
+
+
+
+
+iostream -- input output stream
+
+std::cerr --> error stream
+
+
+in terminal: ./program.out args > output.txt
+sends cout to this file
+
+&> sends both to output.txt
+
+cd ~/ --> home directory
+cd - --> goes back one
+vim ~/.bashrc --> add aliases
+
+
+
+
+
+#include <fstream>
+
+std::ifstream file("Data.txt")
+std::string_line;
+
+while (std::getline(file, line)
+{
+	std:cout << line << std::endl;
+}
+return 0;
+
+

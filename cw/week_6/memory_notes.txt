@@ -1,0 +1,14 @@
+Three main areas we talk about in an address space:
+	-Static Storage (doesn't grow, has global and static vars)
+	-Heap (manual allocation, grows upward to higher memory addrs)
+	-Stack (auto alloc grows downward to lower addrs) 
+Lowlevel languages rely on the stack, but higher level like Java and Python put almost everything on the heap.
+Rem: after a function returns, it's space on the stack is deleted. Don't try to return pointers from here, as they'll just be useless after the call ends.
+Heap memory, however, lives until it is freed manually w/ delete.
+	-Rem: avoid accidentally using malloc'd (new'd) memory after freeing. It has undefined behaviour.
+	-The heap is slower than the stack
+Allocate with new, dealloc with delete
+	-for heap arrays, alloc with new <type>[<arr_size>]
+		+new <type>[<arr_size>]{} to create an array of all zeroes
+	-for heap arrays, dealloc with delete[]
+

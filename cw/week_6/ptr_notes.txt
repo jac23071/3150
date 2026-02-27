@@ -1,0 +1,10 @@
+pointers work the same in c++ as they do in c
+	- int * a; (integer pointer)
+	- print(a); (prints address value)
+	- print(a*); (prints value stored at address)
+	-  int * b = nullptr; (null pointer. DO NOT DEREFERENCE)
+	- can be used to pass things into functions by reference
+C-style arrays are just pointers under the hood
+Pointer arithmetic works the exact same as well
+	- this way, you can us pointers in for loops
+	- still, take care to not index outside of the array
