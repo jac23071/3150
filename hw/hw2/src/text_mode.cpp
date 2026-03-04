@@ -38,17 +38,18 @@ namespace text_mode{
 		std::cout << "Spaces " << num_spaces << std::endl;
 		std::cout << "Punctuation " << num_puncts << std::endl;
 		
-		char upper[str_size];
+		char upper[str_size + 1];
+		upper[str_size] = '\0';
 		char lower[str_size];
 		for (size_t i = 0; i < str_size; i++){
 			upper[i] = std::toupper(target[i]);
-			target[i] = std::tolower(target[i])
+			target[i] = std::tolower(target[i]);
 
 		}
-		std::cout << "Uppercase" << upper << std::endl;
-		std::cout << "Lowercase" << target << std::endl;
+		std::cout << "Uppercase " << upper << std::endl;
+		std::cout << "Lowercase " << target << std::endl;
 		
-		if(target.find("test", 0) != string::npos){
+		if(target.find("test", 0) != std::string::npos){
 			std::cout << "containstestyes" << std::endl;
 		} else {
 			std::cout << "containstestno" << std::endl;
@@ -56,7 +57,8 @@ namespace text_mode{
 		std::string sub = "";
 		if(num_spaces > 0){
 			int posit = target.find(" ");
-			sub = target.substr(0, posit++);
+			sub = target.substr(0, posit + 1);
+			std::cout << "First word" << sub << std::endl;
 		}
 	}
 
