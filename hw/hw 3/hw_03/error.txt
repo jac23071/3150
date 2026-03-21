@@ -1,0 +1,8 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /mnt/c/Users/pscam/Desktop/Compsci/3150/hw/hw 3/hw_03
+collected 52 items
+
+test.py ....................................................             [100%]
+
+============================== 52 passed in 1.62s ==============================

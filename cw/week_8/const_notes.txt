@@ -1,0 +1,19 @@
+const int * x : creates a pointer to a constant integer
+In the case of below:
+	int x = 5;
+	const int * px = &x;
+The const restriction is on the pointer, not the original int (x), so you can change the value in the integer through  (x = 25;) but not through (*px = 25;)
+However, if you make a const int, any pointer to it must also be a const int * to preserve the immutability of the var.
+In case of:
+	int x = 5;
+	int * const px = &x;
+The pointer address itself is now constant, but the value there is mutable
+
+In case of:
+	int x = 5;
+	const int * const px = &x;
+Neither the address nor the value are mutable.
+
+Hint: to make this notation more readable, start from the variable name and read backwards!
+
+The Spiral Rule for reading types: Start from var name and spiral out to closest modifiers. This will detail the exact type!

@@ -1,0 +1,11 @@
+Three ways to pass values into functions in c++:
+	-pass by value (copy value for function)
+	-pass by reference (alternate declared var)
+		+refs cannot be reassigned or null
+		+refs must be declared and initialized at the same time
+		+modern c++ uses refs over pointers
+	-pass by alias ()
+Pointers necessary when:
+	-need null values
+	-need pointer arithmetic
+	-pointers are explicit

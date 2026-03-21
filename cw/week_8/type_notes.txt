@@ -1,0 +1,23 @@
+C++ is a stringly tyoed language:
+	-but sometimes, we need to reintepret types, in this case, whe use type casting!
+	-Some conversions  are implicit/done automatically (eg int to a double)
+	-other times, like when converting to a type of smaller size (risk of info loss), we need to explicitly convert it. This is an explicit cast.
+
+Old explicit cast method: int x = (int)3.14
+	-unsafe tho
+Types of c++ casts:
+	-static_cast
+		+can convert between compatible types (checks at compile time)
+	-const_cast
+		+ can remove/give a var a const restriction
+		+ typical for legacy APIs that don't use consts
+		+It is uncommon and usually unsafe to remove the const restriction from a const var.
+		+modifying a var that was og a const causes undefined behaviour
+		+adding a const restriction is very safe tho.		-reinterpret_cast<>
+		+ can convert wildly differnt types
+		+ extremely low-level and works based on bit
+		+ very dangerous, do not use except for special cases
+		+ good for low-levek gardware programming
+	-dynamic_cast<>
+		+safe casting between class hierarchies
+	

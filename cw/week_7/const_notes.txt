@@ -1,0 +1,5 @@
+the const keyword can make a value immutable
+	-This may be better for clarity
+	-better security
+	-prevents copies from being made
+	-const refs are the default way of passing large vals.

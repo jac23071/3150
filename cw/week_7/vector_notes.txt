@@ -1,0 +1,28 @@
+std::vector operates like an array,but is:
+	-resizeable/ dynamically-sized
+	-tracks it's size (.size())
+	-std::vector<type>
+	-internally stores itself on the heap, but no need for manual delete/ free
+	-append to end of vector via push_back(<element>)
+
+Size vs capacity:
+	-size = how many elements in a vector
+	-capactity = how many blocks in a vector
+Once capacity is reached, the capacity is doubled and elementsare copied over.
+use #include <vector>
+
+std::vector<int> a{};
+std::vector<int> b(5); (five zeroes)
+std::vector<int> c(5,7); (five sevens)
+std::vector<int> d = {1,2,3}; (initalize list)
+vector methods:
+	-d[1] is the same as d.at(1)
+	-empty() (check if empty)
+	-push_back()
+	-pop_back() (pops element, but returns nothing)
+	-clear()
+	-front()
+	-back()
+When vectors reallocate, the pointers we may have previously had on them will become irrelevant
+	-using push_back can lead to realloc
+	-prevent this by preallocating space with reserve()
