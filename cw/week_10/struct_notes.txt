@@ -1,0 +1,25 @@
+Structs work just like Trad C, excpet there's no need for typedef struct {...} <name>;, struct <name> {...}; works!
+
+Structs may contain other structs. 
+
+Use keyword "this" to specify the varables within an instance of a struct.
+
+Can define a struct's method from the outside, eg:
+struct something{int no; double do_it();};
+
+double something::do_it() const {std::cout << no << std::endl;}
+	-the extra const keyword makes it so you don't alter the variable. Good habit to do this by default.
+
+It is best to use 'getter' and 'setter' methods than directly access or change struct vars.
+
+You can make vars priavte or public with those keywords.
+	-private vars cannot be modified by operations/methods outside the struct itself.
+	-public vars can be.
+
+You may also use the "protected" keyword to ensure that a var is private, yet accessible by subclasses/derived structs (for inheritance, which is later).
+
+The only difference between a class and a struct, is that classes are private by default. That's it.
+
+A class may have a constructor, which is a special member with no return value (not even a void), that sets up member vars and runs by default.
+	-can use initializer list for faster initialization before the constructor body even runs. (necessary for const members).
+	-default constructors may be made as an overloaded function that occurs when no args are given.

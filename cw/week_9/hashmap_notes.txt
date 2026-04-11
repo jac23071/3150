@@ -1,0 +1,13 @@
+Hashmaps fucntion much like dicts in python: they use key-value pairs
+	-from <unordered_map> header.
+	-std::unordered_map<[keytype], [value_type]> [name]
+	-to iterate over hashmaps: for(const auto& pair: [umap_name]){}
+		+pair.first for the key, pair.second for the value
+		+auto autodetects the type returned from the umap.
+	- use .find([target]) to find where/if a piece of data exists (only for unordered_sets, which take only single vals, not key-val pairs). 
+		+ if (set.find([target]) ! = set.end()), the it was found
+		+ You may alternatively use set_name.contains() [only exists in c++23]
+std::map also provided.
+	-not a hashing alg, it's made with a red-black tree, so lookups are NOT constant time anymore, it's O(log_n)
+
+Unordered_sets also included here. 

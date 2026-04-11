@@ -1,0 +1,26 @@
+Handling errors tradionally done with non-zero return codes	-but what if a non-zero return val is what we intend?
+
+Could also be done with output params, but this can make code unclean and clunky
+
+Modern C++ handles these using excpetions!
+	- called functions <throw> errors for the caller functions to <catch>!
+		+ catch via try-catch blocks.
+	- when an excpetion is thrown, the function is immediately returned.
+		+so if you have anything alloc'd on the heap, if you don't free it when the exception occurs, you'll get a memory leak. <:O 
+
+Small issues:
+	- the control flow on excpetions can be obscure
+	_ it's harder to think about these in complex systems
+	_ solutions: use std::except<expected_type, error_type> and return std::unexpected when something wrong occurs.
+
+Remember to return 1 in main to indicte to the operating system that an error occured.
+
+Expected is used more often nowadays, but excpetions are still good for very rare errors.
+	-some environments completely forbid excpetions like:
+		+embedded systems, real-time systems, game engines, low-latency trading systems, OS kernels.
+		+ forbidden due to stack unwinding cost, slowdown, and not allowing for program termination.
+
+In summary: 3 error handling methods:
+	- c style: return values
+	- old cpp style: try-catch excpetions
+	- modern cpp style: std:expected;

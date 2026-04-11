@@ -1,0 +1,5 @@
+Enums map terms to values, makign code more readable.
+	-by default, the first calue is 0, and they increment as it goes on, but vals can be manually assigned.
+
+Scoped enums/enum class
+	-safe andmore strongly typed than prev enums

@@ -1,0 +1,29 @@
+Smart pointers are auto dealloc'd.
+
+Rem: the keyword 'this' creates a raw, c-style pointer
+	-avoid returning a 'this', as mixing raw and smart pointers is not good.
+
+Unique pointers = follow the strict ownership doctrine
+	-make with auto p = std::make_unique<int>(42)
+	-type = std::unique_ptr<int> z;
+	-A pointer that points to something that may only ever have one pointer
+	-a pointer may be moved tho, using std::move();
+	-a getter method exists to get tarditional, raw poiinter form the unique pointer, but it is mostly for old, legacy systems and libraries.
+	-even passing by value into a function will cause an error.
+		+circumvent this by either using std::move() in the fucntion call or passing via reference (references discouraged for smart pointers tho).
+
+Shared pointers = follow shared ownership doctrine
+	-make with auto p = std::make_shared<int>(42);
+	-type: std::shared_ptr<int> z;
+	-When a new object is created, we get back a pointer to the object
+	-A shared pointer points actually to a shared code blakc that tracks the count of references pointing to it and a pointer that points to the actual data.
+	- a pointer may be reassigned to another object.
+	- if all shared pointers to an object are realloc'd to other objects, the data gets deleted/freed/dealloc'd
+		+fun fact: this method of pointer cpunting is critical to python's grabage collection!
+		+cyclical references may occur where shared objects may end up pointing to each other, causing things to never get deleted. Python has a garbage collector for this purpose, but C++ has no such thing.
+	- using std::make_shared<int>(42) is far quicker and safer than theold way which is std::shared_ptr<int>(new int(42));
+	-for returning 'this':
+		+could return 
+
+Weak pointer = follows weak ownership doctrine
+	-
