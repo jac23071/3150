@@ -1,0 +1,23 @@
+You can implement a copy-constructor for a class, which will create a new object by copying data from another object.
+	-Copy duplicates resources, which could be expensive
+	-
+
+Can also have a move constructor for an object, which will be activated by std::move() being used on an object
+	-changes ownership of a value
+
+STL objects typically come with these pre-made.
+
+rvalues= any values not assigned to a variable
+	-temporary, disappear after their line is run
+	-reference with double &&
+
+lvalues = any value assigned to a variable
+	-intemporary
+	-referenced with single a &
+
+Rule of five: if you write any, you likely should write all
+	-destructor
+	-copy constructor
+	-copy assignment operator
+	-move constructor
+	-move assignment operator
